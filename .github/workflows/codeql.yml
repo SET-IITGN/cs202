@@ -81,8 +81,8 @@ jobs:
     - if: matrix.build-mode == 'manual'
       shell: bash
       run: |         
-        gcc test1.c
-
+        for f in `git ls-files '*.c'`; do gcc "$f"; done;
+        
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
       with:
