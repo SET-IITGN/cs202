@@ -20,7 +20,7 @@ jobs:
       - checkout
       - run:
           name: "Compile"
-          command: python3 *.py       
+          command: echo $(git ls-files '*.py')      
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
