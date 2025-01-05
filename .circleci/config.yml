@@ -20,7 +20,7 @@ jobs:
       - checkout
       - run:
           name: "Compile"
-          command: gcc *.c
+          command: gcc *.c;
                    python3 *.py          
 
 # Orchestrate jobs using workflows
