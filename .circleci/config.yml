@@ -20,7 +20,8 @@ jobs:
       - checkout
       - run:
           name: "Compile"
-          command: echo $(git ls-files '*.py')      
+          command: for f in `git ls-files '*.c'`; do gcc "$f"; done;
+                   for f in `git ls-files '*.py'`; do python3 "$f"; done
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
