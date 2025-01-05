@@ -21,9 +21,9 @@ jobs:
       - run:
           name: "Compile"
           command: echo "compiling all C source files...";
-                   for f in `git ls-files '*.c'`; do gcc "$f"; done;
+                   for f in `git ls-files '*.c'`; do gcc -c "$f"; done;
                    echo "compiling all Python source files...";
-                   for f in `git ls-files '*.py'`; do python3 "$f"; done
+                   for f in `git ls-files '*.py'`; do python3 -c "$f"; done
 
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/workflows/ & https://circleci.com/docs/configuration-reference/#workflows
