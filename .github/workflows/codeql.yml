@@ -44,7 +44,7 @@ jobs:
       matrix:
         include:
         - language: c-cpp
-          build-mode: manual
+          build-mode: none
         - language: python
           build-mode: none
         # CodeQL supports the following values keywords for 'language': 'c-cpp', 'csharp', 'go', 'java-kotlin', 'javascript-typescript', 'python', 'ruby', 'swift'
@@ -83,8 +83,6 @@ jobs:
       run: |
         echo "compiling all C source files...";
         for f in `git ls-files '*.c'`; do gcc "$f"; done;
-        echo "compiling all Python source files...";
-        for f in `git ls-files '*.py'`; do python3 "$f"; done
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
