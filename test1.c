@@ -5,6 +5,6 @@ int main(){
     if (1) {
         free(ptr);
     }
-    //free(ptr);
+    free(ptr);
     return 0;
 }
