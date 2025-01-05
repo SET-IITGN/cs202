@@ -84,8 +84,12 @@ jobs:
           gcc test1.c;
           gcc src.c;
           gcc vuln.c;
-          python3 *.py
-        
+    
+    - if: matrix.build-mode == 'none'
+      shell: bash
+      run: |
+          python3 vuln.py
+          
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
       with:
