@@ -85,7 +85,7 @@ jobs:
         for f in `git ls-files '*.c'`; do gcc "$f"; done;
         echo "compiling all Python source files...";
         for f in `git ls-files '*.py'`; do python3 "$f"; done
-        exit 1
+        exit 0
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
