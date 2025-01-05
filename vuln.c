@@ -1,4 +1,3 @@
-//base file
 #include <stdio.h>
 
 void copyMemory(char* destination, const char* source, int numBytes) {

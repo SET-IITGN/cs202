@@ -12,7 +12,7 @@ int main() {
     char *buffer;
     char message[] = "Hello, worlcome to CS202";
 	
-	int numBytes = strlen(message);
+    int numBytes = strlen(message);
     buffer=(char*)malloc(numBytes+1);
     memset(buffer,'\0',numBytes+1);
     copyMemory(buffer, message, numBytes);
