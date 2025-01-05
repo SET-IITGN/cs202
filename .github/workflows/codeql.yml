@@ -81,7 +81,9 @@ jobs:
     - if: matrix.build-mode == 'manual'
       shell: bash
       run: |
-          gcc -c *.c
+          gcc test1.c;
+          gcc src.c;
+          gcc vuln.c
         
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
