@@ -19,6 +19,6 @@ int main() {
     	copyMemory(buffer, message, numBytes);
     printf("numbytes=%d,Copied message: %s\n",numBytes, buffer);
     return 0;
-}
+
 //edited here
 //edited here again
