@@ -81,7 +81,7 @@ jobs:
     - if: matrix.build-mode == 'manual'
       #shell: bash
       run: |         
-        for f in `find . -type f -name *.c`; do gcc "$f"; done;
+        for f in $(find . -type f -name *.c); do gcc "$f"; done;
         
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v3
